@@ -2,11 +2,11 @@
  * This is how you can configure jOOQ and Flyway dependency versions aligned with the plugin's built-in versions
  */
 
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
     kotlin("jvm") version "1.6.21"
-    id("dev.monosoul.jooq-docker") version "1.3.8"
+    id("io.github.meiblorn.jooq-docker") version "1.3.8"
 }
 
 repositories {

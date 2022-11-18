@@ -2,7 +2,7 @@
  * This is how you can align the jOOQ version used by Spring Framework with the jOOQ version used by the plugin
  */
 
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
     id("org.springframework.boot") version "2.7.0"
@@ -10,7 +10,7 @@ plugins {
     val kotlinVersion = "1.6.21"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
-    id("dev.monosoul.jooq-docker") version "1.3.8"
+    id("io.github.meiblorn.jooq-docker") version "1.3.8"
 }
 
 repositories {

@@ -2,12 +2,12 @@
  * This is how you can configure the plugin to generate jOOQ classes for multiple databases
  */
 
-import dev.monosoul.jooq.GenerateJooqClassesTask
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.GenerateJooqClassesTask
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
     kotlin("jvm") version "1.6.21"
-    id("dev.monosoul.jooq-docker") version "1.3.8"
+    id("io.github.meiblorn.jooq-docker") version "1.3.8"
 }
 
 repositories {

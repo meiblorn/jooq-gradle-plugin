@@ -1,10 +1,10 @@
 # Gradle Docker jOOQ Plugin
 
-[![Build Status](https://github.com/monosoul/jooq-gradle-plugin/actions/workflows/build-on-push-to-main.yml/badge.svg?branch=main)](https://github.com/monosoul/jooq-gradle-plugin/actions/workflows/build-on-push-to-main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/monosoul/jooq-gradle-plugin/branch/main/graph/badge.svg?token=7SWSOTIBMX)](https://codecov.io/gh/monosoul/jooq-gradle-plugin)
-[![GitHub Release](https://img.shields.io/github/release/monosoul/jooq-gradle-plugin.svg?label=GitHub%20Release)](https://github.com/monosoul/jooq-gradle-plugin/releases)
-[![Gradle Plugins Release](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/dev/monosoul/jooq-docker/dev.monosoul.jooq-docker.gradle.plugin/maven-metadata.xml.svg?label=Gradle%20Plugin%20Portal)](https://plugins.gradle.org/plugin/dev.monosoul.jooq-docker)
-[![license](https://img.shields.io/github/license/monosoul/jooq-gradle-plugin.svg)](LICENSE)
+[![Build Status](https://github.com/meiblorn/jooq-gradle-plugin/actions/workflows/build-on-push-to-main.yml/badge.svg?branch=main)](https://github.com/meiblorn/jooq-gradle-plugin/actions/workflows/build-on-push-to-main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/meiblorn/jooq-gradle-plugin/branch/main/graph/badge.svg?token=7SWSOTIBMX)](https://codecov.io/gh/meiblorn/jooq-gradle-plugin)
+[![GitHub Release](https://img.shields.io/github/release/meiblorn/jooq-gradle-plugin.svg?label=GitHub%20Release)](https://github.com/meiblorn/jooq-gradle-plugin/releases)
+[![Gradle Plugins Release](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/com/github/meiblorn/jooq-docker/io.github.meiblorn.jooq-docker.gradle.plugin/maven-metadata.xml.svg?label=Gradle%20Plugin%20Portal)](https://plugins.gradle.org/plugin/io.github.meiblorn.jooq-docker)
+[![license](https://img.shields.io/github/license/meiblorn/jooq-gradle-plugin.svg)](LICENSE)
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Copyright 2021 [Adrian Skrobacz](https://github.com/adrianskrobaczrevolut)
@@ -13,10 +13,12 @@ Copyright 2021 Revolut Ltd
 
 Copyright 2022 [Andrei Nevedomskii](https://github.com/monosoul)
 
+Copyright 2022 [Meiblorn](https://github.com/meiblorn)
+
 ---
 
-Notice: this plugin was originally developed [here](https://github.com/revolut-engineering/jooq-plugin), but since
-I can't publish it under the same group, I had to change the group from `com.revolut` to `dev.monosoul`.
+Notice: this plugin was originally developed by [Revolut](https://github.com/revolut-engineering/jooq-plugin) 
+and [Monosoul](https://github.com/monosoul/jooq-gradle-plugin)
 
 ---
 
@@ -32,13 +34,13 @@ Plugin registers task `generateJooqClasses` that does following steps:
 
 Detailed examples are available in the [examples directory](examples) of this repository.
 
-By default plugin is configured to work with PostgreSQL, so the following minimal config is enough:
+By default, plugin is configured to work with PostgreSQL, so the following minimal config is enough:
 
 ```kotlin
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -58,10 +60,10 @@ as shown in examples below.
 Configuring schema names and other parameters of the task:
 
 ```kotlin
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -93,10 +95,10 @@ dependencies {
 To configure the plugin to use another version or edition of Flyway the following config can be used:
 
 ```kotlin
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -114,7 +116,7 @@ To configure the plugin to use another version or edition of jOOQ the following 
 
 ```kotlin
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -133,10 +135,10 @@ dependencies {
 To configure the plugin to work with another DB like MySQL the following config can be applied:
 
 ```kotlin
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -178,7 +180,7 @@ To register custom types:
 
 ```kotlin
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -208,7 +210,7 @@ To use XML-based configuration:
 
 ```kotlin
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -252,7 +254,7 @@ To exclude flyway schema history table from generated classes:
 
 ```kotlin
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -291,7 +293,7 @@ To use the plugin with a remote DB:
 
 ```kotlin
 plugins {
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -323,12 +325,12 @@ This could be achieved by registering a separate class generation task for every
 Here's an example how to generate jOOQ classes for PostgreSQL and MySQL in a single project:
 
 ```kotlin
-import dev.monosoul.jooq.GenerateJooqClassesTask
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.GenerateJooqClassesTask
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
     kotlin("jvm") version "1.6.21"
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -406,25 +408,25 @@ Here's an example of how to use `gradle.properties` file to configure the plugin
 `gradle.properties`:
 
 ```properties
-dev.monosoul.jooq.withContainer.db.username=root
-dev.monosoul.jooq.withContainer.db.password=mysql
-dev.monosoul.jooq.withContainer.db.name=mysql
-dev.monosoul.jooq.withContainer.db.port=3306
-dev.monosoul.jooq.withContainer.db.jdbc.schema=jdbc:mysql
-dev.monosoul.jooq.withContainer.db.jdbc.driverClassName=com.mysql.cj.jdbc.Driver
-dev.monosoul.jooq.withContainer.image.name=mysql:8.0.29
-dev.monosoul.jooq.withContainer.image.envVars.MYSQL_ROOT_PASSWORD=mysql
-dev.monosoul.jooq.withContainer.image.envVars.MYSQL_DATABASE=mysql
+io.github.meiblorn.jooq.withContainer.db.username=root
+io.github.meiblorn.jooq.withContainer.db.password=mysql
+io.github.meiblorn.jooq.withContainer.db.name=mysql
+io.github.meiblorn.jooq.withContainer.db.port=3306
+io.github.meiblorn.jooq.withContainer.db.jdbc.schema=jdbc:mysql
+io.github.meiblorn.jooq.withContainer.db.jdbc.driverClassName=com.mysql.cj.jdbc.Driver
+io.github.meiblorn.jooq.withContainer.image.name=mysql:8.0.29
+io.github.meiblorn.jooq.withContainer.image.envVars.MYSQL_ROOT_PASSWORD=mysql
+io.github.meiblorn.jooq.withContainer.image.envVars.MYSQL_DATABASE=mysql
 ```
 
 `build.gradle.kts`:
 
 ```kotlin
-import dev.monosoul.jooq.RecommendedVersions
+import io.github.meiblorn.jooq.RecommendedVersions
 
 plugins {
     kotlin("jvm") version "1.6.21"
-    id("dev.monosoul.jooq-docker")
+    id("io.github.meiblorn.jooq-docker")
 }
 
 repositories {
@@ -441,7 +443,7 @@ dependencies {
 And here's an example how to customize the plugin configuration from command line:
 
 ```shell
-./gradlew build -Pdev.monosoul.jooq.withContainer.db.username=root -Pdev.monosoul.jooq.withContainer.db.password=password
+./gradlew build -Pio.github.meiblorn.jooq.withContainer.db.username=root -Pio.github.meiblorn.jooq.withContainer.db.password=password
 ```
 
 #### ❗ NOTE: `withoutContainer` properties have higher priority than `withContainer` properties.

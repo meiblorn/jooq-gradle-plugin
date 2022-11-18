@@ -1,3 +1,3 @@
 allprojects {
-    group = "dev.monosoul.jooq.example"
+    group = "io.github.meiblorn.jooq.example"
 }
